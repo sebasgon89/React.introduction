@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+  </head>
+
+  <style>
+    #para-id {
+      color:green;
+    }
+
+    h2 {
+      color:red;
+      font-style: italic;
+    }
+
+    .my-fruits {
+      font-style: bold; 
+      color: blueviolet;
+    }
+
+  </style>
+
+  <body>
+    <div id="my-react-app">
+    </div>
+
+    <script>
+      var e1 = React.createElement("div", {key: "e1-key"}, "Some fruits");
+
+      var fruit_1 = React.createElement("li", {key: "fr-1"}, "Orange");
+      var fruit_2 = React.createElement("li", {key: "fr-2"}, "Apple");
+      var fruit_3 = React.createElement("li", {key: "fr-3"}, "Banana");
+
+      var element_list = [e1, fruit_1, fruit_2, fruit_3];
+
+      var list_el = React.createElement("ul", {className: "my-fruits", id: "fruit-list"}, element_list);
+
+      ReactDOM.render(list_el, document.getElementById("my-react-app"));
+    </script>
+  </body>
+</html>
